@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_website_blocks_blocks_page_banners",
+  "info": {
+    "displayName": "Blocks - Page banner"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "bottomLeftText": {
+      "type": "text"
+    },
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

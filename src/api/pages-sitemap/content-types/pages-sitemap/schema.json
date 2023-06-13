@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pages_sitemaps",
+  "info": {
+    "singularName": "pages-sitemap",
+    "pluralName": "pages-sitemaps",
+    "displayName": "Pages - Sitemap",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
+    },
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "global.seo"
+    },
+    "blocks": {
+      "type": "dynamiczone",
+      "components": [
+        "website-blocks.blocks-page-banner",
+        "website-blocks.blocks-property-list"
+      ]
+    }
+  }
+}

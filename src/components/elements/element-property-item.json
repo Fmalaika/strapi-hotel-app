@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_elements_element_property_items",
+  "info": {
+    "displayName": "Element - Property Item"
+  },
+  "options": {},
+  "attributes": {
+    "pages_property": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::pages-property.pages-property"
+    }
+  }
+}

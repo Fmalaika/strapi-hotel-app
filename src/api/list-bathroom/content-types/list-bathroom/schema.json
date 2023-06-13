@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "list_bathrooms",
+  "info": {
+    "singularName": "list-bathroom",
+    "pluralName": "list-bathrooms",
+    "displayName": "List - Bathroom",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "numberOfBathrooms": {
+      "type": "integer"
+    },
+    "pages_properties": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::pages-property.pages-property",
+      "mappedBy": "list_bathroom"
+    }
+  }
+}

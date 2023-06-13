@@ -1,0 +1,78 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pages_properties",
+  "info": {
+    "singularName": "pages-property",
+    "pluralName": "pages-properties",
+    "displayName": "Pages - Properties",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
+    },
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "global.seo"
+    },
+    "location": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::list-location.list-location",
+      "inversedBy": "pages_properties"
+    },
+    "thumbImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "pricePerNight": {
+      "type": "biginteger"
+    },
+    "description": {
+      "type": "text"
+    },
+    "list_bathroom": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::list-bathroom.list-bathroom",
+      "inversedBy": "pages_properties"
+    },
+    "list_facilities": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::list-facility.list-facility",
+      "inversedBy": "pages_properties"
+    },
+    "list_bedroom": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::list-bedroom.list-bedroom"
+    },
+    "imageSlider": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}

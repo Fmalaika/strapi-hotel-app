@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_website_blocks_blocks_property_lists",
+  "info": {
+    "displayName": "Blocks - Property list"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "item": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.element-property-item"
+    }
+  }
+}

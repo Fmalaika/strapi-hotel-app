@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "list_facilities",
+  "info": {
+    "singularName": "list-facility",
+    "pluralName": "list-facilities",
+    "displayName": "List - Facilities",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "icon": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "pages_properties": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::pages-property.pages-property",
+      "mappedBy": "list_facilities"
+    }
+  }
+}
